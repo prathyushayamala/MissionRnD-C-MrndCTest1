@@ -76,13 +76,27 @@ void make_it_circular(struct node *head){
 
 int main(){
 
+	int nums[5] = { 1, 3, 5 };
+	int nums2[5] = { 2, 4, 6 };
+	int l1 = 3, l2 = 3, i;
+	struct node *head1 = NULL;
+	struct node *head2 = NULL;
+	for (i = l1 - 1; i >= 0; i--){
+		addNode(&head1, nums[i]);
+	}
+	for (i = l2 - 1; i >= 0; i--){
+		addNode(&head2, nums2[i]);
+	}
+	make_it_circular(head1);
+	make_it_circular(head2);
+	int len = merge_circularlists(&head1, &head2);
 	//Test Sequences
 
 	//Test Circular Linked Lists
 
     //Test Between Days
-	/*
-	int dates[2][8] = { { 0, 2, 0, 4, 2, 0, 1, 6 }, { 0, 4, 0, 4, 2, 0, 1, 6 } };
+
+	/*int dates[2][8] = { { 0, 2, 0, 4, 2, 0, 1, 6 }, { 0, 4, 0, 4, 2, 0, 1, 6 } };
 
 	struct node *date1head = NULL, *date2head = NULL;
 	for (int i = 7; i >= 0; i--){
@@ -90,8 +104,7 @@ int main(){
 	addNode(&date2head, dates[1][i]);
 	}
 
-	int days = between_days(date1head, date2head);
-	printf("Total Days - %d\n",days);
-	*/
+	int days1 = between_days(date1head, date2head);
+	printf("Total Days - %d\n",days1);*/
 	//Test Concat4 Strings
 }
