@@ -35,7 +35,7 @@ int between_days(struct node *date1head, struct node *date2head){
 	}
 	else{
 		struct node *temp1 = date1head, *temp2 = date2head;
-		int no_of_days, no_of_months, no_of_years, day1 = 0, day2 = 0, mon1 = 0, mon2 = 0, year1 = 0, year2 = 0, count = 1;
+		int no_of_days, day1 = 0,mon1=0, year1 = 0, count = 1;
 		while ((temp1 != NULL) && (temp2 != NULL)){
 			if (count == 1){
 				day1 = temp1->data - temp2->data;
